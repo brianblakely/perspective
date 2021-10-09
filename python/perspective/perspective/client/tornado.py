@@ -11,7 +11,7 @@ import json
 from tornado import gen, ioloop
 from tornado.websocket import websocket_connect
 
-from ..client import PerspectiveClient
+from .client import PerspectiveClient
 from ..manager.manager_internal import DateTimeEncoder
 
 
@@ -31,9 +31,7 @@ class PerspectiveTornadoClient(PerspectiveClient):
 
     def __init__(self):
         """Create a `PerspectiveTornadoClient` that interfaces with a
-        Perspective server over a Websocket, using the given
-        `loop` instance, which defaults to ioloop.IOLoop.current() if
-        not provided by the user."""
+        Perspective server over a Websocket"""
         super(PerspectiveTornadoClient, self).__init__()
 
         self._ws = None
