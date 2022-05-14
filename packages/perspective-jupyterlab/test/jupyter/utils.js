@@ -112,12 +112,12 @@ module.exports = {
         // wait for a cell to be active
         await page.waitForSelector(
             '.jp-Notebook-ExecutionIndicator:not([data-status="idle"])',
-            {timeout: 3000}
+            {timeout: 5000}
         );
 
         await page.waitForSelector(
             '.jp-Notebook-ExecutionIndicator[data-status="idle"]',
-            {timeout: 3000}
+            {timeout: 5000}
         );
 
         // Use our custom keyboard shortcut to run all cells
