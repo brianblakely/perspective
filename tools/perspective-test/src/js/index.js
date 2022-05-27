@@ -231,6 +231,7 @@ beforeAll(async (done) => {
     try {
         browser = await puppeteer.connect({
             browserWSEndpoint: process.env.PSP_BROWSER_ENDPOINT,
+            product: "chrome",
         });
 
         page = await get_new_page();
