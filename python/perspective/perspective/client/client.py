@@ -53,7 +53,6 @@ class PerspectiveClient(object):
             return
 
         handler = self._handlers.get(msg["data"].get("id"))
-
         if handler:
             future = handler.get("future", None)
             keep_alive = handler.get("keep_alive", False)

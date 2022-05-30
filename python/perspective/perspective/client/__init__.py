@@ -9,11 +9,11 @@
 from .client import PerspectiveClient
 
 try:
-    from .tornado import PerspectiveTornadoClient, websocket as tornado_websocket
+    from .aiohttp import PerspectiveAIOHTTPClient, websocket as aiohttp_websocket
 except ImportError:
     ...
 
 try:
-    from .aiohttp import PerspectiveAIOHTTPClient, websocket as aiohttp_websocket
+    from .tornado import PerspectiveTornadoClient, websocket as tornado_websocket
 except ImportError:
     ...
